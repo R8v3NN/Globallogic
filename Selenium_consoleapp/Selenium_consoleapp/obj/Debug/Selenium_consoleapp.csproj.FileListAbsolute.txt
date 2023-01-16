@@ -1,0 +1,14 @@
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\bin\Debug\selenium-manager\linux\selenium-manager
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\bin\Debug\selenium-manager\macos\selenium-manager
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\bin\Debug\selenium-manager\windows\selenium-manager.exe
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\bin\Debug\Selenium_consoleapp.exe.config
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\bin\Debug\Selenium_consoleapp.exe
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\bin\Debug\Selenium_consoleapp.pdb
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\bin\Debug\WebDriver.dll
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\bin\Debug\WebDriver.Support.dll
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\obj\Debug\Selenium_consoleapp.csproj.AssemblyReference.cache
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\obj\Debug\Selenium_consoleapp.csproj.SuggestedBindingRedirects.cache
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\obj\Debug\Selenium_consoleapp.csproj.CoreCompileInputs.cache
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\obj\Debug\Selenium_consoleapp.csproj.CopyComplete
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\obj\Debug\Selenium_consoleapp.exe
+C:\Users\GL\Source\Repos\Selenium_consoleapp\Selenium_consoleapp\obj\Debug\Selenium_consoleapp.pdb
