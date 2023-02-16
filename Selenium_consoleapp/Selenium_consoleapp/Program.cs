@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gherkin.CucumberMessages.Types;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+
 
 namespace Selenium_consoleapp
 {
@@ -12,38 +16,43 @@ namespace Selenium_consoleapp
     {
         static void Main(string[] args)
         {
-            //go to web page
             IWebDriver webDriver = new ChromeDriver();
-            webDriver.Navigate().GoToUrl("https://www.saucedemo.com");
             webDriver.Manage().Window.Maximize();
+            webDriver.Navigate().GoToUrl("https://www.saucedemo.com");
 
-            //click into element
-            By loginBtn = By.CssSelector("#login-button");
-            webDriver.FindElement(loginBtn).Click();
-
-            //send keys
             webDriver.FindElement(By.Id("user-name")).SendKeys("standard_user");
+            webDriver.FindElement(By.Id("password")).SendKeys("secret_sauce");
 
-            //clear field
-            webDriver.FindElement(By.Id("user-name")).Clear();
+            webDriver.FindElement(By.CssSelector("#login-button")).Click();
 
-            //is displayed
-            bool isDisplayed = webDriver.FindElement(By.Id("login-button")).Displayed;
-            Console.WriteLine($"Login button is displayed: {isDisplayed}");
+            webDriver.FindElement(By.CssSelector("#add-to-cart-sauce-labs-backpack")).Click();
+            webDriver.FindElement(By.CssSelector("#add-to-cart-sauce-labs-bike-light")).Click();
+            webDriver.FindElement(By.CssSelector("#add-to-cart-sauce-labs-onesie")).Click();
 
-            //is enabled
-            var isEnabled = webDriver.FindElement(By.Id("login-button")).Enabled;
-            Console.WriteLine($"Login button is enabled: {isEnabled}");
+            webDriver.FindElement(By.CssSelector("#shopping_cart_container")).Click();
 
-            //CSS value
-            var cssValue = webDriver.FindElement(By.Id("login-button")).GetCssValue("color");
-            Console.WriteLine($"Login button has colour: {cssValue}");
+            webDriver.FindElement(By.CssSelector("#checkout")).Click();
 
-            //text
-            var text = webDriver.FindElement(By.CssSelector("div>h3")).Text;
-            Console.WriteLine($"Login button has text: {text}");
+            webDriver.FindElement(By.Id("first-name")).SendKeys("Dawid");
+            webDriver.FindElement(By.Id("last-name")).SendKeys("Nakrewicz");
+            webDriver.FindElement(By.Id("postal-code")).SendKeys("78-200");
 
-            //webDriver.Quit();
+            webDriver.FindElement(By.CssSelector("#continue")).Click();
+
+            var price = webDriver.FindElement(By.CssSelector(".summary_subtotal_label")).Text;
+            Console.WriteLine($"{price} without tax");
+                Assert.IsTrue(price == "Item total: $47.97");
+                Assert.IsNotNull(price);
+
+            webDriver.FindElement(By.CssSelector("#finish")).Click();
+
+            var endingtext = webDriver.FindElement(By.CssSelector(".complete-header")).Text;
+            Console.WriteLine($"{endingtext}");
+            Assert.IsTrue(endingtext == "THANK YOU FOR YOUR ORDER");
+            Assert.IsNotNull(endingtext);
+        
+            webDriver.Quit();
+
             Console.ReadKey();
         }
     }
